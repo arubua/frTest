@@ -7,8 +7,90 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
 </head>
 <body>
-  <app-root></app-root>
+  
+  <div class="d-flex flex-row justify-content-centre ">
+    <div id="sidebar" class="col-md-3 side-nav bg-light ">
+
+      <div class="list-group" style="margin-top:250px">
+        <a href="#" class="list-group-item list-group-item-action">Create item</a>
+        <a href="#" class="list-group-item list-group-item-action">Item List</a>
+      </div>
+    </div>
+    <div id="content" class="col-md-9 d-flex justify-content-centre">
+
+          <form class=" col-md-7" id='clientDetails' style="margin:150px 0 0 250px" >
+
+            <div class="form-group row">
+                <label for="clientPhoto" class="col-sm-3 col-form-label" >Client Photo: </label>
+                  <div class="col-sm-9">
+                    <input class="form-control form-control-file form-control-sm" id="cPhoto" type="file" (change)="onFileChanged($event)">
+                  </div> 
+            </div>
+            <div class="form-group row">
+              <label for='firstName' class="col-sm-3 col-form-label" >First Name: </label>
+              <div class="col-sm-9">
+                  <input class="form-control form-control-sm" type='text' id='firstName' name='firstName' autofocus placeholder='Client'>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for='lastName' class="col-sm-3 col-form-label" >Last Name: </label>
+              <div class="col-sm-9">
+                  <input class="form-control form-control-sm" type='text' id='lastName' name='lastName' autofocus placeholder='Names'>
+              </div>
+              </div>
+              <div class="form-group row">
+                <label for='rating' class="col-sm-3 col-form-label" >Rating: </label>
+                <div class="col-sm-9">
+                    <select  class="form-control form-control-sm" id="rating" name='rating'>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
+                </div>
+              </div>
+            
+              <div class="form-group row">
+                  <label for='category' class="col-sm-3 col-form-label" >Category: </label>
+                  <div class="col-sm-9">
+                      <select  class="form-control form-control-sm" id="rating" name='rating'>
+                          <option>Running </option>
+                          <option>Jogging </option>
+                        </select>
+                  </div>
+              </div>
+            <div class="form-group row">
+                <label for='subCategory' class="col-sm-3 col-form-label" >Sub Category :</label>
+                <div class="col-sm-9">
+                    <select multiple class="form-control form-control-sm" id="subCategory">
+                        <option>Sports</option>
+                        <option>Leisure</option>
+                        <option>Office</option>
+                      </select>
+                </div> 
+            </div>
+            <div class="form-group row">
+                <label for='amount' class="col-sm-3 col-form-label" >Amount(KES): </label>
+            <div class="col-sm-9">
+                <input class="form-control form-control-sm" type='text' id='amount' name='amount' autofocus placeholder=''>
+            </div>
+            </div>
+            <div class="form-group row">
+                <button type='submit'>Submit</button>
+            </div>
+
+          </form>
+    </div>
+  </div>
+
+  </div>
+
+
+
 </body>
 </html>
